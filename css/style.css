@@ -1,0 +1,60 @@
+/*Fazendo import de uma fonte pelo CSS.*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap');
+:root{
+    --primary-color: rgb(0, 79, 116);
+    --primary-color-darker: rgb(0, 53, 78);
+    --primary-color-light: rgb(0, 141, 206);
+}
+*{
+    /*Determina que o tamanho do conteúdo seja agrupado junto com a borda.*/
+    box-sizing: border-box;
+    /*Está acima da borda, é um tracejado.*/
+    outline: none;
+}
+body{
+    margin: 0;
+    padding: 0%;
+    background-color:  var(--primary-color-darker);
+    /*Fallback, caso não houver a fonte Open Sans, terá a fonte Sans-Serif.*/
+    font-family: "Open Sans", sans-serif;
+    /* O "em" é uma unidade de medida, send em = o tamanho a fonte original, 2em, o dobro da mesma */
+    font-size: 1.3em;
+    /*É o espaçamento entre as linhas, nesse caso seria o tamanho e meio de uma fonte a partir da unidade de medida "em"*/
+    line-height: 1.5em;
+}
+.container{
+    /*Max width determina o tamanho horizontal do "conteudo" */
+    max-width: 640px;
+    border-radius: 15px;
+    margin: 50px auto;
+    background-color:azure;
+    padding: 20px
+}
+form input, form label, form button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+form input{
+    font-size: 1.1em;
+    height: 40px;
+    padding: 0 20px;
+}
+form input:focus{
+    outline: 1px solid var(--primary-color-darker);
+}
+form button{
+    border: none;
+    background-color: var(--primary-color-darker);
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 700;
+    /*Especifica que quando eu passar o mouse em cima do botão, ele mostrará uma mão*/
+    cursor: pointer;
+}
+form button:hover{
+    background-color: var(--primary-color);
+}
+form button:active{
+    background-color: var(--primary-color-light);
+}
