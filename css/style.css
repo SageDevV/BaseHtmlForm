@@ -58,3 +58,6 @@ form button:hover{
 form button:active{
     background-color: var(--primary-color-light);
 }
+.dateTime{
+    text-align: center;
+}
